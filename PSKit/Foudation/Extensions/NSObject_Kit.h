@@ -6,7 +6,7 @@
 //  Copyright (c) 2015年 yerl. All rights reserved.
 //
 
-#import <PSKit/PSConvenientMacro.h>
+#import <PSKit/convenientmacros.h>
 #import <Foundation/Foundation.h>
 
 /**

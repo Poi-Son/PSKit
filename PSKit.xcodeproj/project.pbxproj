@@ -39,7 +39,6 @@
 		2C02DF6A1C671DFB00FCA557 /* PSBase64Encoding.h in Headers */ = {isa = PBXBuildFile; fileRef = 5DE523931C5CDBF6000FA850 /* PSBase64Encoding.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		2C02DF6B1C671DFB00FCA557 /* PSJson_Kit.h in Headers */ = {isa = PBXBuildFile; fileRef = 5DE523951C5CDBF6000FA850 /* PSJson_Kit.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		2C02DF6C1C671DFB00FCA557 /* metamacros.h in Headers */ = {isa = PBXBuildFile; fileRef = 5DE523981C5CDBF6000FA850 /* metamacros.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		2C02DF6D1C671DFB00FCA557 /* PSConvenientMacro.h in Headers */ = {isa = PBXBuildFile; fileRef = 5DE5239B1C5CDBF6000FA850 /* PSConvenientMacro.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		2C02DF6E1C671DFB00FCA557 /* PSFoudation.h in Headers */ = {isa = PBXBuildFile; fileRef = 5DE5239C1C5CDBF6000FA850 /* PSFoudation.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		2C02DF6F1C671DFB00FCA557 /* PSRefernceCycles.h in Headers */ = {isa = PBXBuildFile; fileRef = 5DE5239D1C5CDBF6000FA850 /* PSRefernceCycles.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		2C02DF701C671DFB00FCA557 /* PSConsoleLogger.h in Headers */ = {isa = PBXBuildFile; fileRef = 5DE523A01C5CDBF6000FA850 /* PSConsoleLogger.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -72,6 +71,7 @@
 		2C02DF8B1C671DFD00FCA557 /* PSDesignableView.h in Headers */ = {isa = PBXBuildFile; fileRef = 5DE523DF1C5CDBF6000FA850 /* PSDesignableView.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		2C02DF8C1C671DFD00FCA557 /* PSJSWebView.h in Headers */ = {isa = PBXBuildFile; fileRef = 5DE523E11C5CDBF6000FA850 /* PSJSWebView.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		2C02DF8D1C671DFE00FCA557 /* PSToast.h in Headers */ = {isa = PBXBuildFile; fileRef = 5DE523E31C5CDBF6000FA850 /* PSToast.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		2C02DFA51C67757200FCA557 /* convenientmacros.h in Headers */ = {isa = PBXBuildFile; fileRef = 2C02DFA41C67757200FCA557 /* convenientmacros.h */; };
 		5DE523611C5CDBCB000FA850 /* PSKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5DE523561C5CDBCB000FA850 /* PSKit.framework */; };
 		5DE523E81C5CDBF6000FA850 /* PSAspect.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DE523721C5CDBF6000FA850 /* PSAspect.m */; };
 		5DE523EA1C5CDBF6000FA850 /* PSInvocation.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DE523741C5CDBF6000FA850 /* PSInvocation.m */; };
@@ -141,6 +141,7 @@
 /* Begin PBXFileReference section */
 		2C02DF591C671CC200FCA557 /* FoundationTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FoundationTests.m; sourceTree = "<group>"; };
 		2C02DF5B1C671CE800FCA557 /* LayoutTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LayoutTests.m; sourceTree = "<group>"; };
+		2C02DFA41C67757200FCA557 /* convenientmacros.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = convenientmacros.h; sourceTree = "<group>"; };
 		5DE523561C5CDBCB000FA850 /* PSKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = PSKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5DE5235B1C5CDBCB000FA850 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5DE523601C5CDBCB000FA850 /* PSKitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PSKitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -184,7 +185,6 @@
 		5DE523981C5CDBF6000FA850 /* metamacros.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = metamacros.h; sourceTree = "<group>"; };
 		5DE523991C5CDBF6000FA850 /* runtime.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = runtime.c; sourceTree = "<group>"; };
 		5DE5239A1C5CDBF6000FA850 /* runtime.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = runtime.h; sourceTree = "<group>"; };
-		5DE5239B1C5CDBF6000FA850 /* PSConvenientMacro.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PSConvenientMacro.h; sourceTree = "<group>"; };
 		5DE5239C1C5CDBF6000FA850 /* PSFoudation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PSFoudation.h; sourceTree = "<group>"; };
 		5DE5239D1C5CDBF6000FA850 /* PSRefernceCycles.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PSRefernceCycles.h; sourceTree = "<group>"; };
 		5DE523A01C5CDBF6000FA850 /* PSConsoleLogger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PSConsoleLogger.h; sourceTree = "<group>"; };
@@ -328,7 +328,7 @@
 			children = (
 				5DE523761C5CDBF6000FA850 /* Extensions */,
 				5DE523971C5CDBF6000FA850 /* objc */,
-				5DE5239B1C5CDBF6000FA850 /* PSConvenientMacro.h */,
+				2C02DFA41C67757200FCA557 /* convenientmacros.h */,
 				5DE5239C1C5CDBF6000FA850 /* PSFoudation.h */,
 				5DE5239D1C5CDBF6000FA850 /* PSRefernceCycles.h */,
 				5DE5239E1C5CDBF6000FA850 /* Utils */,
@@ -531,6 +531,7 @@
 				2C02DF601C671DFB00FCA557 /* NSData_Kit.h in Headers */,
 				2C02DF611C671DFB00FCA557 /* NSDate_Kit.h in Headers */,
 				2C02DF621C671DFB00FCA557 /* NSDictionary_Kit.h in Headers */,
+				2C02DFA51C67757200FCA557 /* convenientmacros.h in Headers */,
 				2C02DF631C671DFB00FCA557 /* NSException_Kit.h in Headers */,
 				2C02DF641C671DFB00FCA557 /* NSNull_Kit.h in Headers */,
 				2C02DF651C671DFB00FCA557 /* NSObject_Dispatch.h in Headers */,
@@ -541,7 +542,6 @@
 				2C02DF6A1C671DFB00FCA557 /* PSBase64Encoding.h in Headers */,
 				2C02DF6B1C671DFB00FCA557 /* PSJson_Kit.h in Headers */,
 				2C02DF6C1C671DFB00FCA557 /* metamacros.h in Headers */,
-				2C02DF6D1C671DFB00FCA557 /* PSConvenientMacro.h in Headers */,
 				2C02DF6E1C671DFB00FCA557 /* PSFoudation.h in Headers */,
 				2C02DF6F1C671DFB00FCA557 /* PSRefernceCycles.h in Headers */,
 				2C02DF701C671DFB00FCA557 /* PSConsoleLogger.h in Headers */,
@@ -943,6 +943,7 @@
 				2C02DF571C671B0E00FCA557 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		5DE523501C5CDBCB000FA850 /* Build configuration list for PBXProject "PSKit" */ = {
 			isa = XCConfigurationList;

@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
-#import <PSKit/PSConvenientMacro.h>
+#import <PSKit/convenientmacros.h>
 
 @protocol PSFontObserver;
 

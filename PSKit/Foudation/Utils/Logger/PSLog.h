@@ -7,7 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
-#import <PSKit/PSConvenientMacro.h>
+#import <PSKit/convenientmacros.h>
 
 #ifdef PS_LOG_OFF
     #define PSLog(message, ...)

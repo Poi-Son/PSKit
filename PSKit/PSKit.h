@@ -24,9 +24,6 @@
 
 #import <PSKit/PSBase64Encoding.h>
 
-#import <PSKit/PSRefernceCycles.h>
-#import <PSKit/PSConvenientMacro.h>
-
 #import <PSKit/PSLog.h>
 #import <PSKit/PSFileLogger.h>
 #import <PSKit/PSConsoleLogger.h>
@@ -38,6 +35,8 @@
 
 #pragma mark - objc
 #import <PSKit/metamacros.h>
+#import <PSKit/convenientmacros.h>
+#import <PSKit/PSRefernceCycles.h>
 
 #pragma mark - UIKit
 #import <PSKit/UIColor_Kit.h>

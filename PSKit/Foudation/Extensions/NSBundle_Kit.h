@@ -7,7 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
-#import <PSKit/PSConvenientMacro.h>
+#import <PSKit/convenientmacros.h>
 
 PSExternString(PSBundleIdentifier, "Bundle Identifier")
 PSExternString(PSBundleShortVersionString, "Bundle Version")

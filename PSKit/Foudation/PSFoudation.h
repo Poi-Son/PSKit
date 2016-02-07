@@ -8,7 +8,7 @@
 
 #import "PSLog.h"
 #import "PSRefernceCycles.h"
-#import "PSConvenientMacro.h"
+#import "convenientmacros.h"
 
 #import "NSObject_Kit.h"
 #import "NSObject_Dispatch.h"

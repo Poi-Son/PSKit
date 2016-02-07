@@ -114,14 +114,7 @@
 }
 
 - (NSUInteger)ps_timesAppeard:(NSString *)aString{
-    returnValIf(![self ps_containsString:aString], 0);
-    NSUInteger count = 0;
-    for (int i = 0; i < self.length - aString.length + 1; i++) {
-        if ([[self substringWithRange:NSMakeRange(i, aString.length)] isEqualToString:aString]) {
-            count++;
-        }
-    }
-    return count;
+    return [self componentsSeparatedByString:aString].count - 1;
 }
 @end
 

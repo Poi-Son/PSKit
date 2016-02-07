@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
-#import <PSKit/PSConvenientMacro.h>
+#import <PSKit/convenientmacros.h>
 
 typedef NS_ENUM(NSUInteger, PSSlideTransitioningDirection){
     PSEnumOption(PSSlideTransitioningToLeft, 1, "向左侧滑动"),
