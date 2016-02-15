@@ -8,7 +8,7 @@
 
 #import "PSFoudation.h"
 
-@implementation NSString (Kit)
+@implementation NSString (PS_Kit)
 + (NSString *)ps_randomStringWithLenght:(NSUInteger)lenght{
     char data[lenght];
     for (int x=0;x<lenght;data[x++] = (char)('A' + (arc4random_uniform(26))));
@@ -90,7 +90,7 @@
     return [self stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]];;
 }
 - (NSString *)ps_replaceAll:(NSString *)origin with:(NSString *)replacement{
-    return [self stringByReplacingOccurrencesOfString:origin withString:replacement];
+    return [self stringByReplacingOccurrencesOfString:origin withString:replacement ?: @""];
 }
 
 - (NSString *)ps_removePrefix:(NSString *)prefix{
@@ -120,7 +120,7 @@
 
 
 
-@implementation NSMutableString (Kit)
+@implementation NSMutableString (PS_Kit)
 - (NSMutableString *)ps_appendString:(NSString *)aString{
     [self appendString:aString];
     return self;
@@ -149,6 +149,4 @@
 }
 @end
 
-NSString *NSStringFromUTF8(const char *utf8){
-    return [NSString stringWithUTF8String:utf8];
-}
+

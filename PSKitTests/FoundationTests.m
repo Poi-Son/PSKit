@@ -49,12 +49,44 @@
     XCTAssert([eStr isEqualToString:@"abcabcdef"]);
 }
 
-- (void)testBase64{
-    NSString *data = [@"中国人" ps_base64EncodedString];
-    XCTAssert([data isEqualToString:@"5Lit5Zu95Lq6"]);
+- (void)testEncrypt{
+    NSString *tripleDESEncrypt = [@"中国人" ps_3DESEncryptWithKey:@"123"];
+    XCTAssert([tripleDESEncrypt isEqualToString:@"pU32tvXNcA8wHjP//2d+2A=="]);
     
-    NSData *data2 = [@"5Lit5Zu95Lq6" dataUsingEncoding:NSUTF8StringEncoding];
-    XCTAssert([[data2 ps_base64DecodedString] isEqualToString:@"中国人"]);
+    NSString *tripleDESDecrypt = [@"pU32tvXNcA8wHjP//2d+2A==" ps_3DESDecryptWithKey:@"123"];
+    XCTAssert([tripleDESDecrypt isEqualToString:@"中国人"]);
+}
+
+- (void)testBase64{
+    NSString *DecodedString = @"中国人";
+    NSData *DecodedData = [DecodedString dataUsingEncoding:NSUTF8StringEncoding];
+    
+    NSString *EncodedString = @"5Lit5Zu95Lq6";
+    NSData *EncodedData = [EncodedString dataUsingEncoding:NSUTF8StringEncoding];
+    
+    NSData *data1 = [DecodedString ps_base64EncodedData];
+    XCTAssert([data1 isEqualToData:EncodedData]);
+    
+    NSData *data2 = [EncodedData ps_base64DecodedData];
+    XCTAssert([data2 isEqualToData:DecodedData]);
+    
+    NSString *string1 = [DecodedString ps_base64EncodedString];
+    XCTAssert([string1 isEqualToString:EncodedString]);
+    
+    NSString *string2 = [EncodedString ps_base64DecodedString];
+    XCTAssert([string2 isEqualToString:DecodedString]);
+    
+    NSString *string3 = [EncodedData ps_base64DecodedString];
+    XCTAssert([string3 isEqualToString:DecodedString]);
+    
+    NSString *string4 = [DecodedData ps_base64EncodedString];
+    XCTAssert([string4 isEqualToString:EncodedString]);
+    
+    NSData *data3 = [EncodedData ps_base64DecodedData];
+    XCTAssert([data3 isEqualToData:DecodedData]);
+    
+    NSData *data4 = [DecodedData ps_base64EncodedData];
+    XCTAssert([data4 isEqualToData:EncodedData]);
 }
 
 - (void)testNSArrayKit{

@@ -8,7 +8,6 @@
 
 #import <Foundation/Foundation.h>
 
-
 NS_ASSUME_NONNULL_BEGIN
 @interface NSData (Kit)
 - (NSData *)ps_dataWithTargetEncodingFromUTF8:(NSStringEncoding)targetEncoding;/**< 将UTF8编码的NSData转成目标编码 */

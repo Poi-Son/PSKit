@@ -11,7 +11,7 @@
 #define format(format , ...) [NSString stringWithFormat:format, ##__VA_ARGS__]
 
 NS_ASSUME_NONNULL_BEGIN
-@interface NSString (Kit)
+@interface NSString (PS_Kit)
 + (NSString *)ps_randomStringWithLenght:(NSUInteger)lenght;/**< 随机字符串 */
 
 - (BOOL)ps_containsString:(NSString *)aString;/**< 是否包含字符串 */
@@ -42,7 +42,7 @@ NS_ASSUME_NONNULL_BEGIN
 - (NSUInteger)ps_timesAppeard:(NSString *)aString;/**< 统计字符串出现的次数 */
 @end
 
-@interface NSMutableString (Kit)
+@interface NSMutableString (PS_Kit)
 - (NSMutableString *)ps_appendString:(NSString *)aString;/**< 拼接字符串到后面 */
 - (NSMutableString *)ps_appendFormat:(NSString *)format, ...;/**< 拼接字符串到后面 */
 - (NSMutableString *)ps_subMutableStringFromIndex:(NSUInteger)fromIndex toIndex:(NSUInteger)toIndex;/**< 从${fromIndex}到${toIndex}截取字符串 */
@@ -50,16 +50,19 @@ NS_ASSUME_NONNULL_BEGIN
 - (NSMutableString *)ps_subMutableStringToIndex:(NSUInteger)toIndex;/**< 从头到${toIndex}截取字符串 */
 @end
 
-#pragma mark - Encoding
-@interface NSString (Encoding)
+#pragma mark - URL
+@interface NSString (PS_URL)
 - (NSString *)ps_URLEncoding;/**< url encode */
 - (NSString *)ps_URLDecoding;/**< url decode */
-- (NSString *)ps_MD5Encoding;/**< MD5 */
+- (NSString *)ps_URLParamForKey:(NSString *)aKey;/**< 获取URL String里的参数的值 */
 @end
 
-@interface NSString (Encyption)
+#pragma mark - Encyption
+@interface NSString (PS_Encyption)
+- (NSString *)ps_MD5Encrypt;/**< MD5 */
 
+- (NSString *)ps_3DESEncryptWithKey:(NSString *)aKey;/**< 3DES加密 */
+- (NSString *)ps_3DESDecryptWithKey:(NSString *)aKey;/**< 3DES解密 */
 @end
 
-FOUNDATION_EXPORT NSString *NSStringFromUTF8(const char *utf8);
 NS_ASSUME_NONNULL_END

@@ -14,6 +14,11 @@
     return [data base64EncodedDataWithOptions:NSDataBase64EncodingEndLineWithLineFeed];
 }
 
+- (NSData *)ps_base64DecodedData{
+    NSData *data = [self dataUsingEncoding:NSUTF8StringEncoding];
+    return [data ps_base64DecodedData];
+}
+
 - (NSString *)ps_base64EncodedString{
     NSData *data = [self dataUsingEncoding:NSUTF8StringEncoding];
     return [data base64EncodedStringWithOptions:NSDataBase64EncodingEndLineWithLineFeed];
@@ -29,6 +34,11 @@
 @implementation NSData (PSBase64Encoding)
 - (NSString *)ps_base64DecodedString{
     NSData *data = [[NSData alloc] initWithBase64EncodedData:self options:kNilOptions];
+    return [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
+}
+
+- (NSString *)ps_base64EncodedString{
+    NSData *data = [self ps_base64EncodedData];
     return [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
 }
 
