@@ -6,7 +6,7 @@
 //  Copyright (c) 2015年 yerl. All rights reserved.
 //
 
-#import "UIHandler_Kit.h"
+#import "UIAlertView_Kit.h"
 #import "PSFoudation.h"
 
 const char PS_HANDLER_KEY;
@@ -15,7 +15,7 @@ const char PS_HANDLER_KEY;
 
 @end
 
-@implementation UIAlertView (Handler)
+@implementation UIAlertView (PSKit)
 - (void)ps_showWithHandler:(void (^)(UIAlertView *, NSInteger))handler{
     if (handler) {
         self.delegate = self;
@@ -31,4 +31,5 @@ const char PS_HANDLER_KEY;
         handler(self, buttonIndex);
     }
 }
+
 @end

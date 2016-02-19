@@ -7,18 +7,18 @@
 //
 
 #import <Foundation/Foundation.h>
-#import <PSKit/convenientmacros.h>
+#import <PSKit/PSKitDefines.h>
 
-PSExternString(PSBundleIdentifier, "Bundle Identifier")
-PSExternString(PSBundleShortVersionString, "Bundle Version")
-PSExternString(PSBundleVersion, "Bundle Build")
-PSExternString(PSBundleName, "Bundle Name")
-PSExternString(PSBundlePlatformName, "Platform Name")
-PSExternString(PSBundleSDKName, "SDK Name")
-PSExternString(PSBundleMinimumOSVersion, "Minimum OS Version")
-PSExternString(PSBundleLaunchStoryboardName, "Launch Storyboard Name")
-PSExternString(PSBundleMainStoryboardFile, "Main Storyboard File")
-PSExternString(PSBundleSupportedInterfaceOrientations, "Supported Interface Orientations")
+PSKIT_EXTERN_STRING(PSBundleIdentifier, "Bundle Identifier")
+PSKIT_EXTERN_STRING(PSBundleShortVersionString, "Bundle Version")
+PSKIT_EXTERN_STRING(PSBundleVersion, "Bundle Build")
+PSKIT_EXTERN_STRING(PSBundleName, "Bundle Name")
+PSKIT_EXTERN_STRING(PSBundlePlatformName, "Platform Name")
+PSKIT_EXTERN_STRING(PSBundleSDKName, "SDK Name")
+PSKIT_EXTERN_STRING(PSBundleMinimumOSVersion, "Minimum OS Version")
+PSKIT_EXTERN_STRING(PSBundleLaunchStoryboardName, "Launch Storyboard Name")
+PSKIT_EXTERN_STRING(PSBundleMainStoryboardFile, "Main Storyboard File")
+PSKIT_EXTERN_STRING(PSBundleSupportedInterfaceOrientations, "Supported Interface Orientations")
 
 @interface NSBundle (Kit)
 @end

@@ -6,8 +6,8 @@
 //  Copyright (c) 2015年 yerl. All rights reserved.
 //
 
-#import <PSKit/convenientmacros.h>
 #import <Foundation/Foundation.h>
+#import <PSKit/PSKitDefines.h>
 
 /**
  *  不定参数取值
@@ -29,11 +29,11 @@
  *  存储策略
  */
 typedef NS_ENUM(unsigned long, PSStorePolicy){
-    PSEnumOption(PSStoreUsingAssign, 0, "weak refernce or assign."),
-    PSEnumOption(PSStoreUsingRetainNonatomic, 1, "strong refernce and nonatomic."),
-    PSEnumOption(PSStoreUsingCopyNonatomic, 3, "copied and nonatomic."),
-    PSEnumOption(PSStoreUsingRetain, 01401, "strong refernce and atomic."),
-    PSEnumOption(PSStoreUsingCopy, 01403, "copied and atomic.")
+    PSKIT_ENUM_OPTION(PSStoreUsingAssign, 0, "weak refernce or assign."),
+    PSKIT_ENUM_OPTION(PSStoreUsingRetainNonatomic, 1, "strong refernce and nonatomic."),
+    PSKIT_ENUM_OPTION(PSStoreUsingCopyNonatomic, 3, "copied and nonatomic."),
+    PSKIT_ENUM_OPTION(PSStoreUsingRetain, 01401, "strong refernce and atomic."),
+    PSKIT_ENUM_OPTION(PSStoreUsingCopy, 01403, "copied and atomic.")
 };
 
 NS_ASSUME_NONNULL_BEGIN

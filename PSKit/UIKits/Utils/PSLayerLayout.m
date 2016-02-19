@@ -11,8 +11,8 @@
 #import "PSFoudation.h"
 
 typedef NS_ENUM(NSInteger, PSLayerLayoutMultiplyer) {
-    PSEnumOption(PSLayerLayoutMultiplyerNegative, -1, "反向偏移"),
-    PSEnumOption(PSLayerLayoutMultiplyerPositive, 1, "正向偏移")
+    PSKIT_ENUM_OPTION(PSLayerLayoutMultiplyerNegative, -1, "反向偏移"),
+    PSKIT_ENUM_OPTION(PSLayerLayoutMultiplyerPositive, 1, "正向偏移")
 };
 
 @interface CALayer (PS_SUPER_SIZE)
@@ -54,15 +54,11 @@ typedef NS_ENUM(NSInteger, PSLayerLayoutMultiplyer) {
     CALayer *_relatedLayer;
 }
 #pragma mark - 初始化
-- (instancetype)init{
-    return [self initWithLayer:[PSLayerLayout ps_nil_layer_for_layout]];
-}
-
 - (instancetype)initWithLayer:(CALayer *)layer{
     if (self = [super init]) {
-        _layer = layer;
-        _size = layer.ps_size;
-        _location = layer.ps_location;
+        _layer = layer ?: [[self class] ps_nil_layer_for_layout];
+        _size = _layer.ps_size;
+        _location = _layer.ps_location;
     }
     return self;
 }

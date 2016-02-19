@@ -21,6 +21,9 @@ NS_ASSUME_NONNULL_BEGIN
  *  注: Parent系列布局函数, 在superlayer为空时, 则与layer所在的UIView中的位置进行布局
  */
 @interface PSLayerLayout : NSObject
+- (instancetype)init __attribute__((unavailable("不允许直接实例化")));
++ (instancetype)new __attribute__((unavailable("不允许直接实例化")));
+
 + (instancetype)layoutForLayer:(CALayer *)layer;
 - (instancetype)initWithLayer:(CALayer *)layer NS_DESIGNATED_INITIALIZER;
 
@@ -57,6 +60,9 @@ NS_ASSUME_NONNULL_BEGIN
 @end
 
 @interface PSResolveLayerX : NSObject
+- (instancetype)init __attribute__((unavailable("不允许直接实例化")));
++ (instancetype)new __attribute__((unavailable("不允许直接实例化")));
+
 @property (nonatomic, readonly) PSResolveLayerX *and;/**< 连词, 无操作 */
 @property (nonatomic, readonly) PSResolveLayerX *(^distance)(CGFloat distance);/**< 修改Y的偏差 */
 
@@ -83,6 +89,9 @@ NS_ASSUME_NONNULL_BEGIN
 @end
 
 @interface PSResolveLayerY : NSObject
+- (instancetype)init __attribute__((unavailable("不允许直接实例化")));
++ (instancetype)new __attribute__((unavailable("不允许直接实例化")));
+
 @property (nonatomic, readonly) PSResolveLayerY *and;/**< 连词, 无操作 */
 @property (nonatomic, readonly) PSResolveLayerY *(^distance)(CGFloat distance);/**< 修改X的偏差 */
 

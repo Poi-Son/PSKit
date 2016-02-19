@@ -7,7 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
-#import <PSKit/convenientmacros.h>
+#import <PSKit/PSKitDefines.h>
 
 #ifdef PS_LOG_OFF
     #define PSLog(message, ...)
@@ -50,10 +50,10 @@ NS_ASSUME_NONNULL_BEGIN
 FOUNDATION_EXPORT void PSPrintf(NSString *format, ...);
 
 typedef NS_ENUM(int, PSLogLevel) {
-    PSEnumOption(PSLogLevelDEBUG, 1, "DEBUG"),
-    PSEnumOption(PSLogLevelINFO, 1<<1, "INFO"),
-    PSEnumOption(PSLogLevelWARNING, 1<<2, "WARNING"),
-    PSEnumOption(PSLogLevelERROR, 1<<3, "ERROR")
+    PSKIT_ENUM_OPTION(PSLogLevelDEBUG, 1, "DEBUG"),
+    PSKIT_ENUM_OPTION(PSLogLevelINFO, 1<<1, "INFO"),
+    PSKIT_ENUM_OPTION(PSLogLevelWARNING, 1<<2, "WARNING"),
+    PSKIT_ENUM_OPTION(PSLogLevelERROR, 1<<3, "ERROR")
 };
 
 @protocol PSLogger <NSObject>

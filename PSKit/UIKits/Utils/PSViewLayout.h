@@ -20,6 +20,9 @@ NS_ASSUME_NONNULL_BEGIN
  *  根据frame设置View的位置, 此类不适用于AutoLayout
  */
 @interface PSViewLayout : NSObject
+- (instancetype)init __attribute__((unavailable("不允许直接实例化")));
++ (instancetype)new __attribute__((unavailable("不允许直接实例化")));
+
 + (instancetype)layoutForView:(UIView *)view;
 - (instancetype)initWithView:(UIView *)view NS_DESIGNATED_INITIALIZER;
 
@@ -56,6 +59,9 @@ NS_ASSUME_NONNULL_BEGIN
 @end
 
 @interface PSResolveViewX : NSObject
+- (instancetype)init __attribute__((unavailable("不允许直接实例化")));
++ (instancetype)new __attribute__((unavailable("不允许直接实例化")));
+
 @property (nonatomic, readonly) PSResolveViewX *and;/**< 连词, 无操作 */
 @property (nonatomic, readonly) PSResolveViewX *(^distance)(CGFloat distance);/**< 修改Y的偏差 */
 
@@ -82,6 +88,9 @@ NS_ASSUME_NONNULL_BEGIN
 @end
 
 @interface PSResolveViewY : NSObject
+- (instancetype)init __attribute__((unavailable("不允许直接实例化")));
++ (instancetype)new __attribute__((unavailable("不允许直接实例化")));
+
 @property (nonatomic, readonly) PSResolveViewY *and;/**< 连词, 无操作 */
 @property (nonatomic, readonly) PSResolveViewY *(^distance)(CGFloat distance);/**< 修改X的偏差 */
 

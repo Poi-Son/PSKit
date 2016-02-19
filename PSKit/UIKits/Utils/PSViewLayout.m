@@ -10,8 +10,8 @@
 #import "PSFoudation.h"
 
 typedef NS_ENUM(NSInteger, PSViewLayoutMultiplyer) {
-    PSEnumOption(PSViewLayoutMultiplyerNegative, -1, "反向偏移"),
-    PSEnumOption(PSViewLayoutMultiplyerPositive, 1, "正向偏移")
+    PSKIT_ENUM_OPTION(PSViewLayoutMultiplyerNegative, -1, "反向偏移"),
+    PSKIT_ENUM_OPTION(PSViewLayoutMultiplyerPositive, 1, "正向偏移")
 };
 
 @interface PSResolveViewX ()
@@ -50,15 +50,14 @@ typedef NS_ENUM(NSInteger, PSViewLayoutMultiplyer) {
 }
 #pragma mark - 初始化
 + (instancetype)layoutForView:(UIView *)view{
-    doIf(!view, view = [self ps_nil_view_for_layout]);
     return [[self alloc] initWithView:view];
 }
 
 - (instancetype)initWithView:(UIView *)view{
     if (self = [super init]) {
-        _view = view;
-        _size = view.ps_size;
-        _location = view.ps_location;
+        _view = view ?: [[self class] ps_nil_view_for_layout];
+        _size = _view.ps_size;
+        _location = _view.ps_location;
     }
     return self;
 }

@@ -98,4 +98,27 @@
     [array2 ps_moveObjectAtIndex:1 toIndex:5];
     [array2 isEqualToArray:@[@"0", @"2", @"3", @"4", @"5", @"1", @"6"]];
 }
+
+- (void)testBlockInvocation{
+    PSBlockInvocation *invocation = [PSBlockInvocation invocationWithBlock:^(int i, int j, CGRect rect){
+        XCTAssertEqual(i, 1);
+        XCTAssertEqual(j, 2);
+        XCTAssert(CGRectEqualToRect(rect, CGRectMake(0, 0, 0, 0)));
+        return CGRectMake(rect.origin.x + i, rect.origin.y + i, rect.size.height + j, rect.size.width + j);
+    }];
+    
+    int a = 1;
+    int b = 2;
+    CGRect rect = CGRectMake(0, 0, 0, 0);
+    
+    [invocation setArgument:&a atIndex:1];
+    [invocation setArgument:&b atIndex:2];
+    [invocation setArgument:&rect atIndex:3];
+    [invocation invoke];
+    
+    CGRect result;
+    [invocation getReutrnValue:&result];
+    
+    XCTAssert(CGRectEqualToRect(result, CGRectMake(1, 1, 2, 2)));
+}
 @end

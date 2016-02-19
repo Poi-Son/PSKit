@@ -20,6 +20,7 @@
 #import "NSUserDefaults_Kit.h"
 #import "NSException_Kit.h"
 #import "NSData_Kit.h"
+#import "PSBlockInvocation.h"
 
 #import "PSUndoManager.h"
 

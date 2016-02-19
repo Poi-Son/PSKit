@@ -6,7 +6,7 @@
 //  Copyright (c) 2015年 yerl. All rights reserved.
 //
 
-#import "UIHandler_Kit.h"
+#import "UIControl_Kit.h"
 #import "PSFoudation.h"
 #import <objc/runtime.h>
 #import <objc/message.h>
@@ -14,6 +14,31 @@
 #define PS_EVENT_SEP @"__ps_event__"
 
 @implementation UIControl (PSKit)
+- (void (^)(UIControlEvents, id))ps_on{
+    return ^(UIControlEvents event, id handler){
+        [self ps_addHandler:^(__strong id sender, UIControlEvents events, UIEvent *event) {
+            PSBlockInvocation *invocation = [PSBlockInvocation invocationWithBlock:handler];
+            
+            NSUInteger argCount = invocation.methodSignature.numberOfArguments;
+            
+            if (argCount > 1) {
+                [invocation setArgument:&sender atIndex:1];
+            }
+            if (argCount > 2) {
+                [invocation setArgument:&event atIndex:2];
+            }
+            
+            [invocation invoke];
+        } forEvent:event];
+    };
+}
+
+- (void (^)(UIControlEvents))off{
+    return ^(UIControlEvents events){
+        [self ps_clearHandlersForEvents:events];
+    };
+}
+
 /**
  *  保存Handlers的实例
  */

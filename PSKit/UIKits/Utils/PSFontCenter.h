@@ -8,17 +8,17 @@
 
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
-#import <PSKit/convenientmacros.h>
+#import <PSKit/PSKitDefines.h>
 
 @protocol PSFontObserver;
 
 typedef NS_ENUM(NSInteger, PSFontLevel) {
-    PSEnumOption(PSFontLevelSystem, 0, "字体跟随系统"),
-    PSEnumOption(PSFontLevelSmall, 1, "字体小"),
-    PSEnumOption(PSFontLevelMedium, 2, "标准字体"),
-    PSEnumOption(PSFontLevelLarge, 3, "字体大"),
-    PSEnumOption(PSFontLevelExtralLarge, 4, "字体加大"),
-    PSEnumOption(PSFontLevelExtralExtralLarge, 5, "字体加加大")
+    PSKIT_ENUM_OPTION(PSFontLevelSystem, 0, "字体跟随系统"),
+    PSKIT_ENUM_OPTION(PSFontLevelSmall, 1, "字体小"),
+    PSKIT_ENUM_OPTION(PSFontLevelMedium, 2, "标准字体"),
+    PSKIT_ENUM_OPTION(PSFontLevelLarge, 3, "字体大"),
+    PSKIT_ENUM_OPTION(PSFontLevelExtralLarge, 4, "字体加大"),
+    PSKIT_ENUM_OPTION(PSFontLevelExtralExtralLarge, 5, "字体加加大")
 };
 
 /**

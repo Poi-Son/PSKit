@@ -18,7 +18,7 @@ NS_ASSUME_NONNULL_BEGIN
 @end
 
 @interface PSContainerViewController : UIViewController
-/** 容器 子类必须实现此方法. */
+/** 容器视图.默认返回self.view */
 - (UIView *)containerView;
 /** 当前ViewController. */
 - (UIViewController *)currentViewController;

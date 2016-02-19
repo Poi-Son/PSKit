@@ -8,13 +8,13 @@
 
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
-#import <PSKit/convenientmacros.h>
+#import <PSKit/PSKitDefines.h>
 
 typedef NS_ENUM(NSUInteger, PSSlideTransitioningDirection){
-    PSEnumOption(PSSlideTransitioningToLeft, 1, "向左侧滑动"),
-    PSEnumOption(PSSlideTransitioningToRight, 2, "向右侧滑动"),
-    PSEnumOption(PSSlideTransitioningToTop, 3, "向上滑动"),
-    PSEnumOption(PSSlideTransitioningToBottom, 4, "向下滑动")
+    PSKIT_ENUM_OPTION(PSSlideTransitioningToLeft, 1, "向左侧滑动"),
+    PSKIT_ENUM_OPTION(PSSlideTransitioningToRight, 2, "向右侧滑动"),
+    PSKIT_ENUM_OPTION(PSSlideTransitioningToTop, 3, "向上滑动"),
+    PSKIT_ENUM_OPTION(PSSlideTransitioningToBottom, 4, "向下滑动")
 };
 
 @interface PSSlideAnimatedTransitioning : NSObject<UIViewControllerAnimatedTransitioning>
