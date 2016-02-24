@@ -52,6 +52,7 @@
 #import <PSKit/PSAnimation.h>
 #import <PSKit/PSToast.h>
 #import <PSKit/UIControl_Kit.h>
+#import <PSKit/UITableView_Kit.h>
 
 #pragma mark - UIKit/Layers
 #import <PSKit/PSImageLayer.h>

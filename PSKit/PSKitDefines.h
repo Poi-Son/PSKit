@@ -23,4 +23,12 @@
 
 #define PSKIT_API_UNAVAILABLE(INFO) __attribute__((unavailable(INFO)))
 
+#define PSKIT_IGNORE_PERFORMSELECTOR_LEAKS(action) \
+    do { \
+        _Pragma("clang diagnostic push") \
+        _Pragma("clang diagnostic ignored \"-Warc-performSelector-leaks\"") \
+        action; \
+        _Pragma("clang diagnostic pop") \
+    } while (0)
+
 #endif /* PSKitDefines_h */

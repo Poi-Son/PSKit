@@ -9,7 +9,7 @@
 #import <Foundation/Foundation.h>
 
 @interface PSDelayInvocation : NSObject
-@property (nonatomic, assign) NSInteger delay;/**< 间隔时间 */
+@property (nonatomic, assign) NSTimeInterval delay;/**< 间隔时间 */
 
 - (id)prepareWithTarget:(id)target;
 @end

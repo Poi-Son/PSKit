@@ -127,6 +127,8 @@
 		5D0C0AA61C776ECD0025F356 /* PSDesignableView.h in Headers */ = {isa = PBXBuildFile; fileRef = 5D0C09F91C776E2D0025F356 /* PSDesignableView.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		5D0C0AA71C776ECD0025F356 /* PSJSWebView.h in Headers */ = {isa = PBXBuildFile; fileRef = 5D0C09FB1C776E2D0025F356 /* PSJSWebView.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		5D0C0AA81C776ECD0025F356 /* PSToast.h in Headers */ = {isa = PBXBuildFile; fileRef = 5D0C09FD1C776E2D0025F356 /* PSToast.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		5D72AD721C7C412D003E485B /* UITableView_Kit.h in Headers */ = {isa = PBXBuildFile; fileRef = 5D72AD701C7C412D003E485B /* UITableView_Kit.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		5D72AD731C7C412D003E485B /* UITableView_Kit.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D72AD711C7C412D003E485B /* UITableView_Kit.m */; };
 		5DE523611C5CDBCB000FA850 /* PSKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5DE523561C5CDBCB000FA850 /* PSKit.framework */; };
 /* End PBXBuildFile section */
 
@@ -254,6 +256,8 @@
 		5D0C09FE1C776E2D0025F356 /* PSToast.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PSToast.m; sourceTree = "<group>"; };
 		5D0C09FF1C776E2D0025F356 /* PSWebViewConsoleScript.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = PSWebViewConsoleScript.js; sourceTree = "<group>"; };
 		5D0C0A001C776E2D0025F356 /* PSWebViewScript.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = PSWebViewScript.js; sourceTree = "<group>"; };
+		5D72AD701C7C412D003E485B /* UITableView_Kit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UITableView_Kit.h; sourceTree = "<group>"; };
+		5D72AD711C7C412D003E485B /* UITableView_Kit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UITableView_Kit.m; sourceTree = "<group>"; };
 		5DE523561C5CDBCB000FA850 /* PSKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = PSKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5DE5235B1C5CDBCB000FA850 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5DE523601C5CDBCB000FA850 /* PSKitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PSKitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -417,6 +421,8 @@
 				5D0C09D91C776E2D0025F356 /* UIView_Kit.m */,
 				5D0C09DA1C776E2D0025F356 /* UIViewController_Kit.h */,
 				5D0C09DB1C776E2D0025F356 /* UIViewController_Kit.m */,
+				5D72AD701C7C412D003E485B /* UITableView_Kit.h */,
+				5D72AD711C7C412D003E485B /* UITableView_Kit.m */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -583,6 +589,7 @@
 				5D0C0AA31C776ECD0025F356 /* PSSlideAnimatedTransitioning.h in Headers */,
 				5D0C0AA41C776ECD0025F356 /* PSZoomAnimatedTransitioning.h in Headers */,
 				5D0C0AA51C776ECD0025F356 /* PSContainerViewController.h in Headers */,
+				5D72AD721C7C412D003E485B /* UITableView_Kit.h in Headers */,
 				5D0C0AA61C776ECD0025F356 /* PSDesignableView.h in Headers */,
 				5D0C0AA71C776ECD0025F356 /* PSJSWebView.h in Headers */,
 				5D0C0AA81C776ECD0025F356 /* PSToast.h in Headers */,
@@ -728,6 +735,7 @@
 				5D0C0A6F1C776E2D0025F356 /* PSJSWebView.m in Sources */,
 				5D0C0A5E1C776E2D0025F356 /* PSThemeCenter.m in Sources */,
 				5D0C0A111C776E2D0025F356 /* NSException_Kit.m in Sources */,
+				5D72AD731C7C412D003E485B /* UITableView_Kit.m in Sources */,
 				5D0C0A4A1C776E2D0025F356 /* UIColor_Kit.m in Sources */,
 				5D0C0A311C776E2D0025F356 /* PSFileLogger.m in Sources */,
 				5D0C0A191C776E2D0025F356 /* NSObject_KVO.m in Sources */,
