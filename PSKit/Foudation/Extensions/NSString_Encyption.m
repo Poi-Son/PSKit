@@ -88,6 +88,7 @@
             result = [myData ps_base64EncodedString];
         }
     }
+    free(bufferPtr);
     return result;
 }
 @end

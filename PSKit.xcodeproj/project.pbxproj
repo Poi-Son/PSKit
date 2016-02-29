@@ -21,6 +21,8 @@
 /* End PBXAggregateTarget section */
 
 /* Begin PBXBuildFile section */
+		1D23EDB41C8443AC0064E083 /* NSError_Kit.h in Headers */ = {isa = PBXBuildFile; fileRef = 1D23EDB21C8443AC0064E083 /* NSError_Kit.h */; };
+		1D23EDB51C8443AC0064E083 /* NSError_Kit.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D23EDB31C8443AC0064E083 /* NSError_Kit.m */; };
 		5D0C097F1C776E140025F356 /* Foundation.test.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D0C097D1C776E140025F356 /* Foundation.test.m */; };
 		5D0C09801C776E140025F356 /* Layout.test.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D0C097E1C776E140025F356 /* Layout.test.m */; };
 		5D0C0A021C776E2D0025F356 /* PSAspect.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D0C09831C776E2D0025F356 /* PSAspect.m */; };
@@ -143,6 +145,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1D23EDB21C8443AC0064E083 /* NSError_Kit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSError_Kit.h; sourceTree = "<group>"; };
+		1D23EDB31C8443AC0064E083 /* NSError_Kit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSError_Kit.m; sourceTree = "<group>"; };
 		5D0C097D1C776E140025F356 /* Foundation.test.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Foundation.test.m; sourceTree = "<group>"; };
 		5D0C097E1C776E140025F356 /* Layout.test.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Layout.test.m; sourceTree = "<group>"; };
 		5D0C09821C776E2D0025F356 /* PSAspect.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PSAspect.h; sourceTree = "<group>"; };
@@ -318,6 +322,8 @@
 				5D0C09901C776E2D0025F356 /* NSDate_Kit.m */,
 				5D0C09911C776E2D0025F356 /* NSDictionary_Kit.h */,
 				5D0C09921C776E2D0025F356 /* NSDictionary_Kit.m */,
+				1D23EDB21C8443AC0064E083 /* NSError_Kit.h */,
+				1D23EDB31C8443AC0064E083 /* NSError_Kit.m */,
 				5D0C09931C776E2D0025F356 /* NSException_Kit.h */,
 				5D0C09941C776E2D0025F356 /* NSException_Kit.m */,
 				5D0C09951C776E2D0025F356 /* NSNull_Kit.h */,
@@ -549,6 +555,7 @@
 				5D0C0A781C776ECB0025F356 /* NSData_Kit.h in Headers */,
 				5D0C0A791C776ECB0025F356 /* NSDate_Kit.h in Headers */,
 				5D0C0A7A1C776ECB0025F356 /* NSDictionary_Kit.h in Headers */,
+				1D23EDB41C8443AC0064E083 /* NSError_Kit.h in Headers */,
 				5D0C0A7B1C776ECB0025F356 /* NSException_Kit.h in Headers */,
 				5D0C0A7C1C776ECB0025F356 /* NSNull_Kit.h in Headers */,
 				5D0C0A7D1C776ECB0025F356 /* NSObject_Dispatch.h in Headers */,
@@ -649,6 +656,7 @@
 					};
 					5DE523551C5CDBCB000FA850 = {
 						CreatedOnToolsVersion = 7.2;
+						DevelopmentTeam = X75EPVXZ98;
 					};
 					5DE5235F1C5CDBCB000FA850 = {
 						CreatedOnToolsVersion = 7.2;
@@ -714,6 +722,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1D23EDB51C8443AC0064E083 /* NSError_Kit.m in Sources */,
 				5D0C0A4C1C776E2D0025F356 /* UIControl_Kit.m in Sources */,
 				5D0C0A671C776E2D0025F356 /* PSZoomAnimatedTransitioning.m in Sources */,
 				5D0C0A461C776E2D0025F356 /* UIAlertView_Kit.m in Sources */,

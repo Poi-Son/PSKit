@@ -82,7 +82,7 @@ PSAssociatedKeyAndNotes(PS_CONTAINER_KEY, "Store the weak reference of the conta
     
     if (viewController == fromViewController || !self.isViewLoaded) {
         [_vcStack removeAllObjects];
-        [_vcStack addObject:fromViewController];
+        doIf(fromViewController, [_vcStack addObject:fromViewController]);
         return;
     }
     
@@ -132,7 +132,7 @@ PSAssociatedKeyAndNotes(PS_CONTAINER_KEY, "Store the weak reference of the conta
     UIViewController *fromViewController = _vcStack.count ? [_vcStack lastObject] : nil;
     if (viewController == fromViewController || !self.isViewLoaded) {
         [_vcStack removeAllObjects];
-        [_vcStack addObject:fromViewController];
+        doIf(fromViewController, [_vcStack addObject:fromViewController]);
         return;
     }
     

@@ -21,6 +21,7 @@
 #import <PSKit/NSObject_Dispatch.h>
 #import <PSKit/NSUserDefaults_Kit.h>
 #import <PSKit/NSException_Kit.h>
+#import <PSKit/NSError_Kit.h>
 #import <PSKit/NSNull_Kit.h>
 #import <PSKit/NSBundle_Kit.h>
 #import <PSKit/PSBase64Encoding.h>

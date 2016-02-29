@@ -95,6 +95,7 @@ NSUInteger const PSToastLengthLong = 4;
 }
 
 - (void)viewDidLoad{
+    [super viewDidLoad];
     self.view.userInteractionEnabled = NO;
     
     doIf(_toast.text.length < 1 && !_toast.view, _toast.text = @" ");
@@ -140,6 +141,7 @@ NSUInteger const PSToastLengthLong = 4;
 }
 
 - (void)viewWillAppear:(BOOL)animated{
+    [super viewWillAppear:animated];
     [PSAnimation.before(^{
         _messageView.alpha = 0;
     }).begin(0.5, ^{

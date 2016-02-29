@@ -72,21 +72,32 @@
 }
 
 - (void)ps_getRed:(CGFloat *)red green:(CGFloat *)green blue:(CGFloat *)blue alpha:(CGFloat *)alpha{
+    CGFloat fRed, fGreen, fBlue, fAlpha;
+    
     CGColorRef colorRef = [self CGColor];
     const CGFloat *components = CGColorGetComponents(colorRef);
     
     size_t count = CGColorGetNumberOfComponents(colorRef);
     if (count == 4) {
-        *red = components[0];
-        *green = components[1];
-        *blue = components[2];
-        *alpha = components[3];
+        fRed = components[0];
+        fGreen = components[1];
+        fBlue = components[2];
+        fAlpha = components[3];
     }else if (count == 2){
-        *red = components[0];
-        *green = components[0];
-        *blue = components[0];
-        *alpha = components[1];
+        fRed = components[0];
+        fGreen = components[0];
+        fBlue = components[0];
+        fAlpha = components[1];
+    }else{
+        fRed = 0;
+        fGreen = 0;
+        fBlue = 0;
+        fAlpha = 0;
     }
+    doIf(red != NULL, *red = fRed);
+    doIf(green != NULL, *green = fGreen);
+    doIf(blue != NULL, *blue = fBlue);
+    doIf(alpha != NULL, *alpha = fAlpha);
 }
 @end
 
