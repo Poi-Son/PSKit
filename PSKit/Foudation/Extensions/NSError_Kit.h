@@ -7,6 +7,9 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <PSKit/PSKitDefines.h>
+
+PSKIT_EXTERN NSError *NSErrorWithLocalizedDescription(NSString *description);
 
 @interface NSError (PSKit)
 + (instancetype)ps_errorWithLocalizedDescription:(NSString *)description;

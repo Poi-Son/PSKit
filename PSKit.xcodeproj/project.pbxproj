@@ -21,7 +21,7 @@
 /* End PBXAggregateTarget section */
 
 /* Begin PBXBuildFile section */
-		1D23EDB41C8443AC0064E083 /* NSError_Kit.h in Headers */ = {isa = PBXBuildFile; fileRef = 1D23EDB21C8443AC0064E083 /* NSError_Kit.h */; };
+		1D23EDB41C8443AC0064E083 /* NSError_Kit.h in Headers */ = {isa = PBXBuildFile; fileRef = 1D23EDB21C8443AC0064E083 /* NSError_Kit.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		1D23EDB51C8443AC0064E083 /* NSError_Kit.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D23EDB31C8443AC0064E083 /* NSError_Kit.m */; };
 		5D0C097F1C776E140025F356 /* Foundation.test.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D0C097D1C776E140025F356 /* Foundation.test.m */; };
 		5D0C09801C776E140025F356 /* Layout.test.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D0C097E1C776E140025F356 /* Layout.test.m */; };
@@ -555,7 +555,6 @@
 				5D0C0A781C776ECB0025F356 /* NSData_Kit.h in Headers */,
 				5D0C0A791C776ECB0025F356 /* NSDate_Kit.h in Headers */,
 				5D0C0A7A1C776ECB0025F356 /* NSDictionary_Kit.h in Headers */,
-				1D23EDB41C8443AC0064E083 /* NSError_Kit.h in Headers */,
 				5D0C0A7B1C776ECB0025F356 /* NSException_Kit.h in Headers */,
 				5D0C0A7C1C776ECB0025F356 /* NSNull_Kit.h in Headers */,
 				5D0C0A7D1C776ECB0025F356 /* NSObject_Dispatch.h in Headers */,
@@ -596,6 +595,7 @@
 				5D0C0AA31C776ECD0025F356 /* PSSlideAnimatedTransitioning.h in Headers */,
 				5D0C0AA41C776ECD0025F356 /* PSZoomAnimatedTransitioning.h in Headers */,
 				5D0C0AA51C776ECD0025F356 /* PSContainerViewController.h in Headers */,
+				1D23EDB41C8443AC0064E083 /* NSError_Kit.h in Headers */,
 				5D72AD721C7C412D003E485B /* UITableView_Kit.h in Headers */,
 				5D0C0AA61C776ECD0025F356 /* PSDesignableView.h in Headers */,
 				5D0C0AA71C776ECD0025F356 /* PSJSWebView.h in Headers */,

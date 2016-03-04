@@ -20,3 +20,7 @@
     return [self errorWithDomain:domain code:-1000 userInfo:@{NSLocalizedDescriptionKey: description}];
 }
 @end
+
+NSError *NSErrorWithLocalizedDescription(NSString *description){
+    return [NSError ps_errorWithLocalizedDescription:description];
+}
