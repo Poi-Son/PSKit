@@ -8,6 +8,14 @@
 
 #import "PSFoudation.h"
 
+NSString *NSStringWithFormat(NSString *format, ...){
+    va_list args;
+    va_start(args, format);
+    NSString *result = [[NSString alloc] initWithFormat:format arguments:args];
+    va_end(args);
+    return result;
+}
+
 @implementation NSString (PS_Kit)
 + (NSString *)ps_randomStringWithLenght:(NSUInteger)lenght{
     char data[lenght];
