@@ -184,11 +184,11 @@ NSString * const PSFileErrorKey = @"cn.yerl.error.PSFile.error.key";
 
 #pragma mark - orverride
 - (NSString *)description{
-    return format(@"<PSFile: %p>:\n{\n   type: %@,\n   path: %@\n}", self, self.isDirectory ? @"Directory" : @"File", _path);
+    return NSStringWithFormat(@"<PSFile: %p>:\n{\n   type: %@,\n   path: %@\n}", self, self.isDirectory ? @"Directory" : @"File", _path);
 }
 
 - (NSString *)debugDescription{
-    return format(@"<PSFile: %p>:\n{\n   type: %@,\n   path: %@\n}", self, self.isDirectory ? @"Directory" : @"File", _path);
+    return NSStringWithFormat(@"<PSFile: %p>:\n{\n   type: %@,\n   path: %@\n}", self, self.isDirectory ? @"Directory" : @"File", _path);
 }
 
 - (BOOL)isEqualToFile:(PSFile *)otherFile{

@@ -70,7 +70,7 @@
         UIControlEvents obj = [events[i] integerValue];
         if ((obj & controlEvents) == obj) {
             [[self _ps_operations] removeObjectForKey:@(obj)];
-            [self removeTarget:self action:NSSelectorFromString(format(@"%@%@sender:forEvent:", @(obj), PS_EVENT_SEP)) forControlEvents:obj];
+            [self removeTarget:self action:NSSelectorFromString(NSStringWithFormat(@"%@%@sender:forEvent:", @(obj), PS_EVENT_SEP)) forControlEvents:obj];
         }
     }
 }
@@ -83,7 +83,7 @@
     for (NSUInteger i = 0; i < events.count; i ++) {
         UIControlEvents obj = [events[i] integerValue];
         if ((obj & controlEvents) == obj) {
-            [self addTarget:self action:NSSelectorFromString(format(@"%@%@sender:forEvent:", @(obj), PS_EVENT_SEP)) forControlEvents:obj];
+            [self addTarget:self action:NSSelectorFromString(NSStringWithFormat(@"%@%@sender:forEvent:", @(obj), PS_EVENT_SEP)) forControlEvents:obj];
             [self ps_addHandler:handler forEvent:obj];
         }
     }

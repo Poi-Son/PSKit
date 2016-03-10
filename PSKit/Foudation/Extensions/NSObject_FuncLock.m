@@ -9,7 +9,7 @@
 #import "PSFoudation.h"
 #import "PSAspect.h"
 
-#define ProxyPrefix format(@"__ps_proxy_%@_", NSStringFromClass(self.class))
+#define ProxyPrefix NSStringWithFormat(@"__ps_proxy_%@_", NSStringFromClass(self.class))
 
 @implementation NSObject (PSFuncLock)
 - (NSMutableSet *)_ps_locked_func_set{

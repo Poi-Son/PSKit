@@ -39,7 +39,7 @@
     if (!logData) {
         logData = [NSMutableData new];
     }
-    NSString *log = format(@"%@ %s (%@: %@)\n%@\n=========================================\n", [[NSDate new] ps_toString:@"yyyy-MM-dd HH:mm:ss.SSS"], func, [@(file) lastPathComponent], @(line), msg);
+    NSString *log = NSStringWithFormat(@"%@ %s (%@: %@)\n%@\n=========================================\n", [[NSDate new] ps_toString:@"yyyy-MM-dd HH:mm:ss.SSS"], func, [@(file) lastPathComponent], @(line), msg);
     [logData appendData:[log dataUsingEncoding:NSUTF8StringEncoding]];
     [logData writeToFile:logFile.path atomically:YES];
 }

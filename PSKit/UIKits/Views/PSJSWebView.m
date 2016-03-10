@@ -36,7 +36,7 @@ PSAssociatedKey(PS_PRINT_LOGS_KEY);
 - (void)ps_addJavascriptInterface:(id)interface withJSObjectName:(NSString *)name{
     PSAssert(name.length, @"JSObjectName不能为空");
     PSAssert(![name ps_isEqualsIgnoreCase:@"console"], @"JSObjectName不能为console");
-    PSAssert(![self.ps_javascriptInterfaces ps_containsKey:name], format(@"JSObject:%@ 已被注册", name));
+    PSAssert(![self.ps_javascriptInterfaces ps_containsKey:name], NSStringWithFormat(@"JSObject:%@ 已被注册", name));
     
     if (self.ps_javascriptInterfaces.count) {
         [self ps_aspect_method];

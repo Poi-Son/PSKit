@@ -7,10 +7,11 @@
 //
 
 #import <Foundation/Foundation.h>
-
-#define format(format , ...) [NSString stringWithFormat:format, ##__VA_ARGS__]
+#import <PSKit/PSKitDefines.h>
 
 NS_ASSUME_NONNULL_BEGIN
+PSKIT_EXTERN NSString *NSStringWithFormat(NSString *format, ...) NS_FORMAT_FUNCTION(1,2);
+
 @interface NSString (PS_Kit)
 + (NSString *)ps_randomStringWithLenght:(NSUInteger)lenght;/**< 随机字符串 */
 

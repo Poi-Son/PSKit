@@ -43,7 +43,7 @@
 }
 
 - (NSString *)identifier{
-    return _identifier ?: (_identifier = format(@"PSThreadLocalKey_%p", self));
+    return _identifier ?: (_identifier = NSStringWithFormat(@"PSThreadLocalKey_%p", self));
 }
 @end
 

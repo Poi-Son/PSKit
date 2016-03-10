@@ -11,7 +11,7 @@
 #import "PSInvocation.h"
 #import "runtime.h"
 
-#define ProxySelector(class, selector) NSSelectorFromString(format(@"__ps_proxy_%@_%@", NSStringFromClass(class), NSStringFromSelector(selector)))
+#define ProxySelector(class, selector) NSSelectorFromString(NSStringWithFormat(@"__ps_proxy_%@_%@", NSStringFromClass(class), NSStringFromSelector(selector)))
 
 @interface NSObject (PSAspect_Associated_Info)
 #pragma mark - instance interceptors
@@ -171,7 +171,7 @@
     NSParameterAssert(aSelector);
     NSParameterAssert(aClass);
     NSParameterAssert(aInterceptor);
-    PSAssert([aClass instancesRespondToSelector:aSelector], format(@"PSAspect can not complete: Instance of <%@> does not respond to selector:%@", NSStringFromClass(aClass), NSStringFromSelector(aSelector)));
+    PSAssert([aClass instancesRespondToSelector:aSelector], @"PSAspect can not complete: Instance of <%@> does not respond to selector:%@", NSStringFromClass(aClass), NSStringFromSelector(aSelector));
     
     [self _proxy_selector:aSelector in_class:aClass];
     
@@ -194,7 +194,7 @@
     NSParameterAssert(aSelector);
     NSParameterAssert(aInterceptor);
     NSParameterAssert(aInterceptor);
-    PSAssert([aInstance respondsToSelector:aSelector], format(@"PSAspect can not complete: Instance:<%@ %p> does not respond to selector:%@",NSStringFromClass(aInterceptor.class), aInstance, NSStringFromSelector(aSelector)));
+    PSAssert([aInstance respondsToSelector:aSelector], @"PSAspect can not complete: Instance:<%@ %p> does not respond to selector:%@",NSStringFromClass(aInterceptor.class), aInstance, NSStringFromSelector(aSelector));
     
     [self _proxy_selector:aSelector in_class:[aInstance class]];
     

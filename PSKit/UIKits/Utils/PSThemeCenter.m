@@ -43,7 +43,7 @@ static NSString * PSThemeManagerKey = @"PS_THEME_MANAGER_KEY";
 }
 
 - (void)registerTheme:(PSTheme *)theme forName:(NSString *)themeName{
-    PSAssert(![self.registedThemes ps_containsKey:themeName], format(@"已存在名为【%@】的主题", themeName));
+    PSAssert(![self.registedThemes ps_containsKey:themeName], @"已存在名为【%@】的主题", themeName);
     [self.registedThemes setObject:theme forKey:themeName];
 }
 
@@ -58,7 +58,7 @@ static NSString * PSThemeManagerKey = @"PS_THEME_MANAGER_KEY";
 
 - (void)changeThemeWithName:(NSString *)themeName{
     PSAssertParameter(themeName != nil && themeName.length > 0);
-    PSAssert([self.registedThemes ps_containsKey:themeName], format(@"不存在名为【%@】的主题", themeName));
+    PSAssert([self.registedThemes ps_containsKey:themeName], @"不存在名为【%@】的主题", themeName);
     PSTheme *theme = [self.registedThemes objectForKey:themeName];
     
     _currentTheme = theme;
