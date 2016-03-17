@@ -45,7 +45,7 @@ PSKIT_EXTERN NSString *NSStringWithFormat(NSString *format, ...) NS_FORMAT_FUNCT
 
 @interface NSMutableString (PS_Kit)
 - (NSMutableString *)ps_appendString:(NSString *)aString;/**< 拼接字符串到后面 */
-- (NSMutableString *)ps_appendFormat:(NSString *)format, ...;/**< 拼接字符串到后面 */
+- (NSMutableString *)ps_appendFormat:(NSString *)format, ... NS_FORMAT_FUNCTION(1,2);/**< 拼接字符串到后面 */
 - (NSMutableString *)ps_subMutableStringFromIndex:(NSUInteger)fromIndex toIndex:(NSUInteger)toIndex;/**< 从${fromIndex}到${toIndex}截取字符串 */
 - (NSMutableString *)ps_subMutableStringFromIndex:(NSUInteger)fromIndex;/**< 从${fromIndex}到尾截取字符串 */
 - (NSMutableString *)ps_subMutableStringToIndex:(NSUInteger)toIndex;/**< 从头到${toIndex}截取字符串 */

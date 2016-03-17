@@ -17,17 +17,17 @@
 @implementation PSDelayInvocation{
     PSDelayProxy *_proxy;
     NSMutableArray<NSInvocation *> *_stack;
+    NSTimeInterval _lastExeTime;
 }
 
 - (void)exeInvocation{
-    static NSTimeInterval lastExeTime = 0;
     NSTimeInterval now = [[NSDate date] timeIntervalSince1970];
-    if (now - lastExeTime < self.delay) {
+    if (now - _lastExeTime < self.delay) {
         [self.class cancelPreviousPerformRequestsWithTarget:self];
         [self performSelector:@selector(exeInvocation) withObject:nil afterDelay:self.delay];
         return;
     }
-    lastExeTime = now;
+    _lastExeTime = now;
     
     NSInvocation *invocation = [self.stack lastObject];
     [self.stack removeAllObjects];
