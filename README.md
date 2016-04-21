@@ -1,5 +1,8 @@
-# [PSKit](https://github.com/Poi-Son/PSKit)
-## 目录
+# PSKit
+
+## Usage
+
+To run the example project, clone the repo, and run `pod install` from the Example directory first.
 ### [PSAspect](http://yerl.cn/blog/PSAspect/)
 ### [PSLayout](http://yerl.cn/blog/PSLayout)
 ### [PSThemeCenter、PSFontCenter](http://yerl.cn/blog/PSThemeCenter-PSFontCenter/)
@@ -8,9 +11,21 @@
 ### [PSJSWebView](http://yerl.cn/blog/PSJSWebview/)
 ### [其它工具](http://yerl.cn/blog/Others)
 
-##集成
+## Requirements
 
-1. 将PSKit.framework复制到你的项目下，在`Linked Frameworks and Libraries`添加framework引用。
-2. 打开Build Settings，`Other Linker Flags`添加`-ObjC`。
+## Installation
 
-　　Enjoy yourself!
+PSKit is available through [CocoaPods](http://cocoapods.org). To install
+it, simply add the following line to your Podfile:
+
+```ruby
+pod "PSKit"
+```
+
+## Author
+
+PoiSon, git@yerl.cn
+
+## License
+
+PSKit is available under the MIT license. See the LICENSE file for more info.

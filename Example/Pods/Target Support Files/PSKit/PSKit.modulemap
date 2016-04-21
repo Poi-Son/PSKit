@@ -1,0 +1,6 @@
+framework module PSKit {
+  umbrella header "PSKit-umbrella.h"
+
+  export *
+  module * { export * }
+}
