@@ -1,11 +1,9 @@
 use_frameworks!
 
-target 'PSKit_Example', :exclusive => true do
-  pod 'PSKit', :path => '../'
-end
-
-target 'PSKit_Tests', :exclusive => true do
+target 'PSKit_Example' do
   pod 'PSKit', :path => '../'
 
-  
+  target 'PSKit_Tests' do
+    inherit! :search_paths
+  end
 end
