@@ -1,1 +1,0 @@
-../../../../../PSKit/Classes/UIKits/ViewControllers/AnimatedTransitionsings/PSSlideAnimatedTransitioning.h
