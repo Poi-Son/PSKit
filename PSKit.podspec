@@ -21,10 +21,10 @@ Pod::Spec.new do |s|
   iOS开发的常用类扩展
                        DESC
 
-  s.homepage         = "https://github.com/Poi-Son/PSKit"
+  s.homepage         = "https://github.com/alan-yeh/PSKit"
   s.license          = 'MIT'
-  s.author           = { "PoiSon" => "git@yerl.cn" }
-  s.source           = { :git => "https://github.com/Poi-Son/PSKit.git", :tag => s.version.to_s }
+  s.author           = { "Alan Yeh" => "git@yerl.cn" }
+  s.source           = { :git => "https://github.com/alan-yeh/PSKit.git", :tag => s.version.to_s }
 
   s.ios.deployment_target = '8.0'
 
