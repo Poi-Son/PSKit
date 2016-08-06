@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = "PSKit"
-  s.version          = "1.0.1"
+  s.version          = "1.0.2"
   s.summary          = "PSKit."
 
 # This description is used to generate tags and improve search results.
@@ -18,13 +18,13 @@ Pod::Spec.new do |s|
 #   * Finally, don't worry about the indent, CocoaPods strips it!
 
   s.description      = <<-DESC
-  iOS开发的常用类扩展
+  PSKit不再维护
                        DESC
 
-  s.homepage         = "https://github.com/alan-yeh/PSKit"
+  s.homepage         = "https://github.com/poi-son/PSKit"
   s.license          = 'MIT'
   s.author           = { "Alan Yeh" => "git@yerl.cn" }
-  s.source           = { :git => "https://github.com/alan-yeh/PSKit.git", :tag => s.version.to_s }
+  s.source           = { :git => "https://github.com/poi-son/PSKit.git", :tag => s.version.to_s }
 
   s.ios.deployment_target = '8.0'
 
